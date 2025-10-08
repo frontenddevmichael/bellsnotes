@@ -685,7 +685,7 @@ class SupabaseManager {
       emptyState.innerHTML = `
         <i class="fas fa-exclamation-triangle" style="font-size:3rem; color: var(--error);"></i>
         <p style="color: var(--error);">Error: ${this.renderer.escapeHtml(message)}</p>
-        <button class="btn" onclick="location.reload()">
+        <button  onclick="location.reload()">
           <i class="fas fa-redo"></i> Retry
         </button>
       `;
