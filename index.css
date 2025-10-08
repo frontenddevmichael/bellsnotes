@@ -898,7 +898,7 @@ body.dark .pq {
         position: static;
     }
 
-    header input{
+    header input {
         width: 80%;
     }
 
@@ -940,12 +940,8 @@ body.dark .pq {
         width: 52px;
         height: 52px;
     }
-    
-    .filterModal{
-        position: absolute;
-        top: 60%;
 
-    }
+
 }
 
 @media (max-width: 480px) {
@@ -953,14 +949,20 @@ body.dark .pq {
         font-size: 1.35rem;
     }
 
+    .materials {
+        margin-top: 2.5rem;
+    }
 
     .material-card {
         padding: 1.25rem;
     }
 
     #filtersBar {
+        width: 100%;
         padding: 1.5rem;
     }
+
+   
 }
 
 /* ───────────────────────── PERFORMANCE ───────────────────────── */
