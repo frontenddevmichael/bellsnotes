@@ -965,6 +965,31 @@ body.dark .pq {
    
 }
 
+@media (max-width: 360px) {
+    header h1 {
+        font-size: 1.35rem;
+    }
+
+    .materials {
+        margin-top: 4rem;
+    }
+
+    .material-card {
+        padding: 1.25rem;
+    }
+
+    #filtersBar {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .filterModal{
+        padding:.51rem;
+    }
+
+   
+}
+
 /* ───────────────────────── PERFORMANCE ───────────────────────── */
 @media (prefers-reduced-motion: reduce) {
 
