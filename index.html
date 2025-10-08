@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bells Note – Student Dashboard</title>
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script defer src="/Supabase.js"></script>
+    <script defer src="/app.js"></script>
+</head>
+
+<body>
+    <div class="scroll-progress"></div>
+
+    <!-- Page loader -->
+    <div id="loader" class="active">
+        <div class="ring"></div>
+        <div class="ring ring2"></div>
+    </div>
+
+    <!-- Ambient & Monterey BG layers -->
+    <div id="ambient-ripple-bg"></div>
+
+    <!-- Scroll-to-top FAB -->
+    <button class="fab" title="Scroll to Top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+
+            <h1 id="logo"><i class="fas fa-book"></i> Bells Notes</h1>
+            <div class="navActions">
+                <input type="search" id="searchInput"
+                    placeholder="Search and download academic resources for your studies (Course title,code ot topic...)" />
+                <button class="filterBtn"><i class="fas fa-filter"></i> Filters</button>
+            </div>
+            <label class="switch">
+                <input type="checkbox" id="themeToggle" />
+                <span class="slider"></span>
+                <span class="clouds_stars"></span>
+            </label>
+
+    </div>
+    </header>
+    <!-- Active filter chips -->
+    <div class="filter-chips"></div>
+    <div class="filterModal">
+        <div id="closeModal"><i class="fas fa-xmark"></i></div>
+        <!-- Filter bar -->
+        <section class="filters animate-in" id="filtersBar">
+            <!-- Toggle -->
+            <div class="fiter Txt">
+                <h2>Filter Tools</h2>
+                <p>Refine your search with advanced search features</p>
+                <i class="fas fa-sliders"></i>
+                <p></p>
+            </div>
+
+            <!-- 📂 Collapsible options -->
+            <div class="filter-options">
+                <select id="collegeFilter">
+                    <option value="">College</option>
+                    <option value="">Colnas</option>
+                    <option value="">Colmans</option>
+                    <option value="">Colenvs</option>
+                    <option value="">Coleng</option>
+                </select>
+                <select id="departmentFilter">
+                    <option value="">Deparment</option>
+
+                </select>
+                <select id="levelFilter">
+                    <option value="">Level</option>
+                    <option value="">100</option>
+                    <option value="">200</option>
+                    <option value="">300</option>
+                    <option value="">400</option>
+                    <option value="">500</option>
+                </select>
+                <select id="semesterFilter">
+                    <option value="">Semester</option>
+                    <option value="">First semester</option>
+                    <option value="">Second semester</option>
+                </select>
+                <select name="" id="typeFilter">
+                    <option value="">note</option>
+                    <option value="">past question</option>
+                </select>
+                <button> Apply Filters</button>
+            </div>
+
+            <div class="greeting"></div>
+        </section>
+    </div>
+    <!-- Materials -->
+    <section class="materials">
+        <div class="card-grid"><!-- cards inserted by app.js --></div>
+
+        <div class="empty-state">
+            <i class="fas fa-box-open" style="font-size:3rem;"></i>
+            <p>No matching materials found</p>
+            <button class="btn" onclick="resetFilters()">Reset Filters</button>
+        </div>
+    </section>
+    </div>
+</body>
+
+</html>
